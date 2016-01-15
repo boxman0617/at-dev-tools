@@ -1,0 +1,26 @@
+{
+  "name": "at-dev-tools",
+  "homepage": "https://github.com/boxman0617/at-dev-tools",
+  "authors": [
+    "(Alan Tirado <atirado0617@gmail.com>)"
+  ],
+  "description": "Dev tools for angular.",
+  "main": ["./angular-at-dev-tools.js", "./at-dev-modal.css"],
+  "moduleType": [],
+  "keywords": [
+    "angular",
+    "dev"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-cookies": "~1.4.8",
+    "angular-sanitize": "~1.4.8"
+  }
+}

@@ -1,0 +1,198 @@
+[at-dev-modal] > div,
+.at-dev-modal > div,
+at-dev-modal > div {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 500px;
+  margin-left: -250px;
+  background-color: #ffffff;
+  border-radius: 0 0 5px 5px;
+  border-color: #AA0000;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  border-top-width: 0;
+  border-style: solid;
+  -webkit-box-shadow: 0 0 15px -2px #363636;
+  -moz-box-shadow: 0 0 15px -2px #363636;
+  box-shadow: 0 0 15px -2px #363636;
+}
+[at-dev-modal] > div .title,
+.at-dev-modal > div .title,
+at-dev-modal > div .title {
+  border: 1px solid #cccccc;
+  padding: 5px;
+  background-color: #727272;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+[at-dev-modal] > div .info,
+.at-dev-modal > div .info,
+at-dev-modal > div .info {
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  padding: 5px 10px;
+  margin: 0 5px;
+  word-wrap: break-word;
+}
+[at-dev-modal] > div .dev-header,
+.at-dev-modal > div .dev-header,
+at-dev-modal > div .dev-header {
+  position: relative;
+  text-align: center;
+  padding: 5px;
+  border-bottom: 1px solid #999999;
+  font-weight: bold;
+  background-color: #F4F4F4;
+}
+[at-dev-modal] > div .dev-header .move-button,
+.at-dev-modal > div .dev-header .move-button,
+at-dev-modal > div .dev-header .move-button {
+  display: none;
+}
+[at-dev-modal] > div .dev-header .close-button,
+.at-dev-modal > div .dev-header .close-button,
+at-dev-modal > div .dev-header .close-button,
+[at-dev-modal] > div .dev-header .exit-button,
+.at-dev-modal > div .dev-header .exit-button,
+at-dev-modal > div .dev-header .exit-button,
+[at-dev-modal] > div .dev-header .move-button,
+.at-dev-modal > div .dev-header .move-button,
+at-dev-modal > div .dev-header .move-button {
+  position: absolute;
+  top: 6px;
+  right: 25px;
+  cursor: pointer;
+}
+[at-dev-modal] > div .dev-header .exit-button,
+.at-dev-modal > div .dev-header .exit-button,
+at-dev-modal > div .dev-header .exit-button {
+  top: 5px;
+  right: 5px;
+}
+[at-dev-modal] > div .dev-question,
+.at-dev-modal > div .dev-question,
+at-dev-modal > div .dev-question {
+  padding: 22px;
+  text-align: center;
+  background-color: #4B4B4B;
+  color: #ffffff;
+  font-weight: bold;
+}
+[at-dev-modal] > div .dev-question .btn,
+.at-dev-modal > div .dev-question .btn,
+at-dev-modal > div .dev-question .btn {
+  height: 29px;
+  margin-top: 5px;
+}
+[at-dev-modal] > div .dev-body,
+.at-dev-modal > div .dev-body,
+at-dev-modal > div .dev-body {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+[at-dev-modal] > div .dev-body .exception,
+.at-dev-modal > div .dev-body .exception,
+at-dev-modal > div .dev-body .exception,
+[at-dev-modal] > div .dev-body .stack,
+.at-dev-modal > div .dev-body .stack,
+at-dev-modal > div .dev-body .stack {
+  border-bottom: 1px solid #000000;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+[at-dev-modal] > div.dev-close,
+.at-dev-modal > div.dev-close,
+at-dev-modal > div.dev-close {
+  border-top-width: 2px;
+  margin: auto;
+  width: auto;
+}
+[at-dev-modal] > div.dev-close .move-button,
+.at-dev-modal > div.dev-close .move-button,
+at-dev-modal > div.dev-close .move-button {
+  display: block;
+}
+[at-dev-modal] > div.dev-close.bottom-right,
+.at-dev-modal > div.dev-close.bottom-right,
+at-dev-modal > div.dev-close.bottom-right {
+  top: auto;
+  left: auto;
+  bottom: 0;
+  right: 0;
+}
+[at-dev-modal] > div.dev-close.bottom-right .move-button i:before,
+.at-dev-modal > div.dev-close.bottom-right .move-button i:before,
+at-dev-modal > div.dev-close.bottom-right .move-button i:before {
+  content: "\f060";
+}
+[at-dev-modal] > div.dev-close.bottom-left,
+.at-dev-modal > div.dev-close.bottom-left,
+at-dev-modal > div.dev-close.bottom-left {
+  top: auto;
+  left: 0;
+  bottom: 0;
+  right: auto;
+}
+[at-dev-modal] > div.dev-close.bottom-left .move-button i:before,
+.at-dev-modal > div.dev-close.bottom-left .move-button i:before,
+at-dev-modal > div.dev-close.bottom-left .move-button i:before {
+  content: "\f062";
+}
+[at-dev-modal] > div.dev-close.top-left,
+.at-dev-modal > div.dev-close.top-left,
+at-dev-modal > div.dev-close.top-left {
+  top: 0;
+  left: 0;
+  bottom: auto;
+  right: auto;
+}
+[at-dev-modal] > div.dev-close.top-left .move-button i:before,
+.at-dev-modal > div.dev-close.top-left .move-button i:before,
+at-dev-modal > div.dev-close.top-left .move-button i:before {
+  content: "\f061";
+}
+[at-dev-modal] > div.dev-close.top-right,
+.at-dev-modal > div.dev-close.top-right,
+at-dev-modal > div.dev-close.top-right {
+  top: 0;
+  left: auto;
+  bottom: auto;
+  right: 0;
+}
+[at-dev-modal] > div.dev-close.top-right .move-button i:before,
+.at-dev-modal > div.dev-close.top-right .move-button i:before,
+at-dev-modal > div.dev-close.top-right .move-button i:before {
+  content: "\f063";
+}
+[at-dev-modal] > div.dev-close .close-button,
+.at-dev-modal > div.dev-close .close-button,
+at-dev-modal > div.dev-close .close-button {
+  top: 7px;
+  right: 8px;
+}
+[at-dev-modal] > div.dev-close .exit-button,
+.at-dev-modal > div.dev-close .exit-button,
+at-dev-modal > div.dev-close .exit-button {
+  display: none;
+}
+[at-dev-modal] > div.dev-close .dev-header,
+.at-dev-modal > div.dev-close .dev-header,
+at-dev-modal > div.dev-close .dev-header {
+  padding-right: 44px;
+}
+[at-dev-modal] > div.dev-close .dev-body,
+.at-dev-modal > div.dev-close .dev-body,
+at-dev-modal > div.dev-close .dev-body {
+  display: none;
+}
