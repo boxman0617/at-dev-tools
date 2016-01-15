@@ -30,7 +30,7 @@
 			}
 		])
 		.config([
-			'$provider',
+			'$provide',
 
 			AtDevExceptionHandler
 		])
@@ -292,9 +292,9 @@
         }
 	}
 
-	function AtDevExceptionHandler($provider) {
+	function AtDevExceptionHandler($provide) {
 		function init() {
-			$provider.decorator('$exceptionHandler', [
+			$provide.decorator('$exceptionHandler', [
 				'AtDevExceptionService',
 				'$delegate',
 
