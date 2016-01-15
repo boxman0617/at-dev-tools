@@ -57,7 +57,7 @@
         this.$get = [
             function() {
                 return {
-                    _env: env,
+                    _env: _env,
                     is: function() {
                         return this._env;
                     }
