@@ -11,7 +11,8 @@
         var DEV_OPEN = "dev-open", DEV_CLOSE = "dev-close", DEV_ICON_OPEN = "fa-plus", DEV_ICON_CLOSE = "fa-minus", DEV_COOKIE_KEY = "devErrors", DEV_POSITION_BOTTOM_LEFT = "bottom-left", DEV_POSITION_BOTTOM_RIGHT = "bottom-right", DEV_POSITION_TOP_LEFT = "top-left", DEV_POSITION_TOP_RIGHT = "top-right", dialogSettings = {
             position: DEV_POSITION_BOTTOM_LEFT,
             hideFor: 0,
-            hideFrom: null
+            hideFrom: null,
+            isMin: false
         };
         $scope.hasException = false;
         $scope.showModal = true;
@@ -39,10 +40,13 @@
             if ($scope.modalState[0] === DEV_OPEN) {
                 $scope.modalState[0] = DEV_CLOSE;
                 $scope.closeButtonIcon[0] = DEV_ICON_OPEN;
+                dialogSettings.isMin = true;
             } else {
                 $scope.modalState[0] = DEV_OPEN;
                 $scope.closeButtonIcon[0] = DEV_ICON_CLOSE;
+                dialogSettings.isMin = false;
             }
+            $cookies.putObject(DEV_COOKIE_KEY, dialogSettings);
         };
         $scope.moveMin = function() {
             var currentPos = dialogSettings.position;
@@ -111,6 +115,9 @@
             var cookie = $cookies.getObject(DEV_COOKIE_KEY);
             if (typeof cookie !== "undefined") {
                 dialogSettings = cookie;
+            }
+            if (dialogSettings.isMin) {
+                $scope.toggleModal();
             }
             $scope.modalState[1] = dialogSettings.position;
             if (displayDialog()) {

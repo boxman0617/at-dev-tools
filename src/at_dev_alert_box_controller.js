@@ -11,7 +11,8 @@ function AtDevAlertBoxController($scope, AtDevExceptionService, $cookies, $filte
         dialogSettings = {
             position: DEV_POSITION_BOTTOM_LEFT,
             hideFor: 0,
-            hideFrom: null
+            hideFrom: null,
+            isMin: false
         };
 
     $scope.hasException = false;
@@ -43,10 +44,14 @@ function AtDevAlertBoxController($scope, AtDevExceptionService, $cookies, $filte
         if($scope.modalState[0] === DEV_OPEN) {
             $scope.modalState[0] = DEV_CLOSE;
             $scope.closeButtonIcon[0] = DEV_ICON_OPEN;
+            dialogSettings.isMin = true;
         } else {
             $scope.modalState[0] = DEV_OPEN;
             $scope.closeButtonIcon[0] = DEV_ICON_CLOSE;
+            dialogSettings.isMin = false;
         }
+
+        $cookies.putObject(DEV_COOKIE_KEY, dialogSettings);
     };
 
     $scope.moveMin = function() {
@@ -124,6 +129,9 @@ function AtDevAlertBoxController($scope, AtDevExceptionService, $cookies, $filte
             dialogSettings = cookie;
         }
 
+        if(dialogSettings.isMin) {
+            $scope.toggleModal();
+        }
         $scope.modalState[1] = dialogSettings.position;
 
         if(displayDialog()) {
